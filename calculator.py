@@ -1,14 +1,15 @@
 def calculator(a,b):
     a = float(input("enter the first number:"))
     b = float(input("enter the second number:"))
-    c = input("enter the operator you want to apply ( +, - , * , / )")
-    if c=='+' :
+    print("1. addtion[+] , 2. subtraction[-] , 3. multiplication[*] , 4. division[/]")
+    c = int(input("enter the desired number for operator"))
+    if c== 1 :
         return a+b
-    elif c=='-':
+    elif c== 2:
         return a-b
-    elif c=='*':
+    elif c== 3:
         return a*b
-    elif c=='/':
+    elif c== 4:
         try:
             print(a/b)
         except:
