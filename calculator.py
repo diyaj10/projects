@@ -1,18 +1,21 @@
-def calculator(a,b):
+def calculator():
     a = float(input("enter the first number:"))
     b = float(input("enter the second number:"))
     print("1. addtion[+] , 2. subtraction[-] , 3. multiplication[*] , 4. division[/]")
     c = int(input("enter the desired number for operator"))
-    if c== 1 :
-        return a+b
-    elif c== 2:
-        return a-b
-    elif c== 3:
-        return a*b
-    elif c== 4:
-        try:
-            print(a/b)
-        except:
-            print("invalid input")
-    
-    calculator(a,b)
+    match c:
+        case 1:
+            print("the addition is:", a + b)
+        case 2:
+            print("the subtraction is:", a - b)
+        case 3:
+            print("the multiplication is:", a * b)
+        case 4:
+           try:
+               print("the division is:", a / b)
+           except ZeroDivisionError:
+               print("Error: Division by zero is not allowed.")
+        case _:
+            print("invalid operator")
+
+calculator()
