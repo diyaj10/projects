@@ -29,4 +29,3 @@ for question in questions:
         break
     print(f"You have won the total of rs{prize_money[i]} \n")
     i+=1
-
