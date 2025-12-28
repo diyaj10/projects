@@ -1,6 +1,8 @@
 import requests
+import os
 query = input("What do you want to know?\n")
-api = "094b51fb41da45dcb7ab6dcfaf30f054"
+api = os.getenv("NEWS_API_KEY")
+
 url =f"https://newsapi.org/v2/everything?q={query}&from=2025-11-27&sortBy=publishedAt&apiKey={api}"
 
 r = requests.get(url)
